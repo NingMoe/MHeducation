@@ -1,0 +1,137 @@
+#container {
+	width: 95%;
+	margin: 6em auto;
+	height: auto;
+	padding-bottom: 80px;
+}
+#container ul li {
+	list-style-type: none;
+}
+#container ul li .title {
+	width: 95%;
+	height: 2.5em;
+	margin-top: 20px;
+	padding: 0 10px 10px;
+	border-bottom: 1px solid #d2d2d2;
+}
+#container  ul li .title .left {
+	height: 2.5em;
+	float: left;
+}
+#container  ul li .title .left img {
+	height: 2.5em;
+}
+/*个人资料*/
+#container .personal_con {
+	width: 100%;
+	margin: 30px auto;
+}
+#container .personal_con .personal_details {
+	width: 95%;
+	margin: 30px auto;
+}
+#container .personal_con .personal_details .personal_details_table tr:nth-child(1) td img {
+	width: 15em;
+	height: 15em;
+	margin: 8px;
+}
+#container .personal_con .personal_details .personal_details_table tr td span:nth-child(1) {
+	color: #5c5c5c;
+	font-size: 2.2em;
+	white-space: pre;
+}
+#container .personal_con .personal_details .personal_details_table tr td span:nth-child(2) {
+	color: #000000;
+	font-size: 2.2em;
+	white-space: pre;
+}
+#container .personal_con .personal_details .personal_details_table tr:nth-child(1) td span:nth-child(2) {
+	color: #000000;
+	font-size: 2.2em;
+	white-space: pre;
+}
+/*活动列表*/
+#container .list_con {
+	width: 100%;
+	margin: 30px auto;
+	min-height: 10em;
+}
+#container .list_con .article_list {
+	width: 100%;
+	margin: 20px auto 40px;
+}
+.article_list  ul li {
+	width: 100%;
+	margin: 15px auto;
+	list-style-type: none;
+	height: auto;
+}
+.article_list  ul li div{
+	padding:10px 0; 
+}
+.article_list  ul li div a {
+	float: left;
+	font-size: 2.2em;
+	line-height: 2.2em;
+	color: #b2b2b2;
+	width: 20em;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+}
+.article_list  ul li div span {
+	float: left;
+	font-size: 2em;
+	color: #b2b2b2;
+	line-height: 2em;
+	display: none;
+}
+.article_list  ul li div #quit {
+	float: right;
+	font-size: 2.2em;
+	color: #b2b2b2;
+	width: auto;
+	cursor: pointer;
+	line-height: 2.2em;
+}
+.article_list  ul li div:hover a {
+	color: #000000;
+}
+.article_list  ul li div:hover span {
+	color: #000000;
+}
+.article_list  ul li div:hover #quit {
+	color: #e84c3d;
+}
+/*面试进度*/
+#container .interview_list {
+	width: 100%;
+	margin: 30px auto;
+}
+#container .interview_details {
+	width: 90%;
+	margin: 30px auto;
+}
+.interview_details table {
+	width: 100%;
+	margin: 0 auto 0 25px;
+}
+.interview_details table tr td {
+	height: 3em;
+	vertical-align: top;
+}
+.interview_details table tr td span {
+	font-size: 2.4em;
+	color: #969696;
+}
+.interview_details table tr td:nth-child(1) {
+	width: 40%;
+}
+.interview_details table tr:hover td:nth-child(1) span {
+	font-size: 2.4em;
+	color: #000000;
+}
+.interview_details table tr:hover td:nth-child(2) span {
+	font-size: 2.4em;
+	color: #e84c3d;
+}

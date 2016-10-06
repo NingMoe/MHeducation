@@ -1,0 +1,164 @@
+body, html {
+	height: 100%;
+}
+body {
+	font-family: Tahoma,'Microsoft Yahei','微软雅黑','宋体','黑体',Arial,Helvetica,STHeiti;
+	font-size: 1em;
+}
+body, img, div, p {
+	font-size: 1em;
+}
+body, img, div, p, ul, li {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+a, p {
+	color: #555;
+	text-decoration: none;
+}
+
+/*导航栏*/
+#navPage {
+	background: rgba(0,0,0,0.9);
+	height: 6em;
+	width: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+}
+#navPage .pad {
+	width: 90%;
+	margin: 0 auto;
+}
+#navPage .navLogo {
+	float: left;
+	margin: 12px 0 0 7px;
+}
+#navPage .navLogo img {
+	height: 4.5em;
+}
+#navPage .navUser li {
+	list-style: none;
+	float: left;
+	height: 26px;
+}
+#navPage .navUser li a {
+	color: #fff;
+	opacity: 1;
+	text-align: center;
+	height: 1em;
+	display: block;
+	font-size: 1.2em;
+	margin: 0 30px;
+	text-decoration: none;
+}
+#navPage li a:hover {
+	color:#e84c3d;
+}
+#navPage .navUser {
+	float: right;
+	margin: 18px 0 0 0;
+}
+#navPage .navUser .login {
+	display: block;
+	height: 2em;
+	margin-left: 10px;
+	color: #ffffff;
+	float: left;
+	font-size: 2.2em;
+}
+#navPage .navUser .login li:nth-child(1) {
+	line-height: 2em;
+	margin-right: 2em;
+}
+#navPage .navUser .login li {
+	line-height: 2em;
+}
+#navPage .navUser .login a {
+	margin: 0 0 0 16px;
+}
+#navPage .navUser a {
+	height: 3em;
+	display: block;
+	float: left;
+}
+#navPage .search {
+	float: right;
+	margin-left: 10px;
+}
+#navPage .navUser .term {
+	width: 10em;
+	height: 2em;
+	padding: 5px 10px;
+	border: 0px;
+	background: #ffffff;
+}
+/*底部栏*/
+#copyright {
+	width: 100%;
+	height: 5em;
+	background: #1b1b1b;
+	min-width: 100%;
+	display: flex;
+	margin-top: 0px;
+}
+#copyright .content {
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+#copyright .content p {
+	font-size: 2.2em;
+	line-height: 2.2em;
+	color: #666666;
+	text-decoration: none;
+}
+#copyright .content p span {
+	color: #e84c3d;
+}
+#container {
+	padding-top: 50px;
+	min-height: 100%;
+}
+/*翻页*/
+#container .list_footer {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+	padding-top: 30px;
+}
+#container .list_footer div {
+	width: auto;
+}
+#container .list_footer div a {
+	color: #969696;
+	font-size: 2.2px;
+	margin-right: 10px;
+}
+#container .list_footer div a:hover {
+	color: #e84c3d;
+	text-decoration: underline;
+}
+/*下拉菜单*/
+.navBox_phone {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 6em;
+	text-align: center;
+	background-color: #000;
+	z-index: 9999;
+	opacity: 0.9;
+	display: none;
+}
+.navBox_phone ul li {
+	list-style-type: none;
+	font-size: 2.5em;
+	line-height: 2.8em;
+}
+.navBox_phone ul li a {
+	color: #ccc;
+}

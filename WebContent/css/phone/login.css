@@ -1,0 +1,100 @@
+#login {
+	width: 90%;
+	height: 100%;
+	margin: 0px auto;
+}
+#login .content {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 150px;
+}
+#login .content .title {
+	height: 3em;
+	padding: 0 10px 10px;
+	border-bottom: 1px solid #d2d2d2;
+}
+#login .content .title .left {
+	height: 3em;
+	float: left;
+}
+#login .content .title .left img {
+	height: 3em;
+}
+#login .content .list {
+	width: 100%;
+	height: auto;
+}
+#copyright {
+	position: absolute;
+	bottom: 0;
+}
+
+/*table*/
+#login_details {
+	width: 70%;
+	margin: 20px auto;
+}
+#login_details tr td {
+	padding: 10px;
+}
+#login_details tr:nth-child(1) a:nth-child(2) {
+	color: #979797;
+	font-size: 2.4em;
+}
+#login_details tr td:nth-child(1) span {
+	color: #979797;
+	font-size: 2.4em;
+	white-space: pre; 
+}
+#login_details tr:nth-child(1) a:nth-child(1) {
+	color: #000000;
+	font-size: 2.4em
+}
+#login_details tr:nth-child(1) td {
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+#login_details tr:nth-child(1) td a:nth-child(2):hover {
+	color: #000000;
+}
+#login_details tr td:nth-child(2) input {
+	width: 10em;
+	font-size: 2.4em;
+	padding:5px;
+	border: 1px solid #b2b2b2;
+}
+#login_details tr td:nth-child(2) input:hover {
+	border: 1px solid #828282;
+}
+#login_details tr td:nth-child(2) input:focus {
+	border: 1px solid #000000;
+	outline: none;
+}
+#login_details tr:nth-child(4) td {
+	text-align: center;
+}
+#login_details tr td #login_btn {
+	width: 3.5em;
+	height: 1.5em;
+	line-height: 1.5em;
+	font-size: 2em;
+	color: #ffffff;
+	font-family: 'Microsoft Yahei','微软雅黑';
+	border-top-left-radius: 4px 2px;
+	border-top-right-radius: 2px 4px;
+	border-bottom-right-radius: 4px 2px;
+	border-bottom-left-radius: 2px 4px;
+	margin: 20px auto;
+	padding: 0;
+	background: #e84c3d;
+	border: #e84c3d;
+}
+#login_details tr td #login_btn:hover {
+	background: #F6867B;
+	border: #F6867B;
+}
+#login_details tr td #login_btn:focus {
+	background: #C52718;
+	border: #C52718;
+	outline: none;
+}

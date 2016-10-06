@@ -1,0 +1,9 @@
+所有表中is开头的字段0:表示未开始，1:表示已结束
+
+TABLE mh
+type(0:家长邀请学生;1:学生邀请家长)
+state(0:发出邀请;1:收到回复;2:达成协议)
+
+TABLE user
+role(0:admin;1:家长;2:学生)
+occupation(0:admin;1:家长;2:学生)

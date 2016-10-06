@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="User">
+
+	
+	<select id="test"  parameterType="com.Form.UserForm" resultType="com.entity.User">
+		select * from user 	   
+	</select>
+	<select id="login"  parameterType="com.entity.User" resultType="com.entity.User">
+		select * from user
+		<where>
+			<if test="email!=null and  email!=''">and email= #{email} </if>
+		</where>	 
+		
+	</select>
+	<select id="getUserByPage"  parameterType="com.entity.User" resultType="com.entity.User">
+		select * from user 	
+		<where>
+			<if test="Phone !=null and  Phone !='' and  Phone !='所有'">and Phone like  "%"#{Phone}"%" </if>
+			<if test="Name !=null and  Name !='' and  Name!='所有'">and Name like  "%"#{Name}"%" </if>
+			<if test="IdNumber !=null and  IdNumber !='' and  IdNumber!='所有'">and IdNumber like  "%"#{IdNumber}"%" </if>
+			<if test="University !=null and  University !='' and  University!='所有'">and University like  "%"#{University}"%" </if>
+			<if test="Graduate_date !=null and  Graduate_date !='' and  Graduate_date!='所有'">and Graduate_date like  "%"#{Graduate_date}"%" </if>
+			<if test="Sex !=null and  Sex !='' and  Sex!='所有'">and Sex like  "%"#{Sex}"%" </if>
+		</where>   
+		<if test="pageSize!=null and  pageSize!=0">limit ${start},${pageSize}	 </if>
+	</select>
+	<select id="getAllUser"  parameterType="com.entity.User" resultType="int">
+		select count(*) from user 	
+		<where>
+			<if test="Phone !=null and  Phone !='' and  Phone !='所有'">and Phone like  "%"#{Phone}"%" </if>
+			<if test="Name !=null and  Name !='' ">and Name like  "%"#{Name}"%" </if>
+			<if test="IdNumber !=null and  IdNumber !='' and  IdNumber!='所有'">and IdNumber like  "%"#{IdNumber}"%" </if>
+			<if test="University !=null and  University !='' and  University!='所有'">and University like  "%"#{University}"%" </if>
+			<if test="Graduate_date !=null and  Graduate_date !='' and  Graduate_date!='所有'">and Graduate_date like  "%"#{Graduate_date}"%" </if>
+			<if test="Sex !=null and  Sex !='' and  Sex!='所有'">and Sex like  "%"#{Sex}"%" </if>		
+		</where>   
+	</select>
+	<select id="RegisterByAjax"  parameterType="com.Form.UserForm" resultType="com.entity.User">
+		select * from user 	
+		<where>
+			<if test="Phone!=null and  Phone!=''">and Phone= #{Phone} </if>
+			<if test="Email!=null and  Email!=''">and Email= #{Email} </if>
+			<if test="IdNumber!=null and  IdNumber!=''">and IdNumber= #{IdNumber} </if>
+			<if test="Nickname!=null and  Nickname!=''">and Nickname= #{Nickname} </if>
+		</where>	   
+		
+		
+	</select>
+	<delete id="deleteUser">
+		delete FROM user  where UserID=#{UserID}
+	</delete>
+	<update id="updatePassword" parameterType="com.Form.UserLoginForm" >
+		update  user SET Password = #{Password}  where Phone=#{Phone}
+	</update>
+	<select id="getUserById" parameterType="int"  resultType="com.entity.User">
+		select * from user 	where UserID=#{UserID}
+	</select>
+	<select id="getMoreUser"  resultType="com.entity.User">
+		select * from user where 
+		<foreach collection="array" item="item" index="index" separator="or" >
+			UserID=#{item}
+		</foreach>
+	</select>
+	<delete id="deleteMoreUser">
+		delete FROM user  where
+		<foreach collection="array" item="item" index="index" separator="or" >
+			UserID=#{item}
+		</foreach>
+	</delete>
+<!-- MHeducation -->
+		<insert id="userRegister" parameterType="com.entity.User" >
+		insert into user
+		( user_id,nickname,role,email,password,phone,occupation,
+		registration_time,head_portrait,sex
+		)
+		values
+		(#{user_id},#{nickname},#{role},#{email},#{password},#{phone},#{occupation},
+		#{registration_time},#{head_portrait},#{sex}
+		)
+	</insert>
+</mapper>

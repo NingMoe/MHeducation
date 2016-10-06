@@ -1,0 +1,58 @@
+/*花粉俱乐部图标*/
+.huafans_con {
+	width: 750px;
+	margin: 20px auto 40px;
+}
+.huafans_con .con_1 {
+	width: 750px;
+	margin: 50px auto 20px;
+}
+.huafans_con .con_2 {
+	width: 500px;
+	margin: 20px auto 50px;
+}
+.huafans_con .campus_box {
+	width: 180px;
+	height: 180px;
+	display: inline-block;
+	margin: 0 30px;
+}
+.huafans_con .campus_box img {
+	width: 180px;
+	height: 180px;
+	margin: 0 30px;
+}
+
+/*花粉俱乐部成员*/
+.fans_list {
+	width: 750px;
+	margin: 20px auto 40px;
+}
+.fans_list #fans_table {
+	width: 550px;
+	margin: 0 auto;
+}
+#fans_table tr td:nth-child(1) {
+	width: 50px;
+	vertical-align: top;
+	font-size: 14px;
+	font-weight: bold;
+	height: 40px;
+	line-height: 24px;
+}
+#fans_table tr td:nth-child(2) {
+	width: 450px;
+	vertical-align: top;
+	font-size: 13px;
+	line-height: 24px;
+}
+#fans_table tr:nth-child(1) td {
+	text-align: center;
+	font-size: 16px;
+	height: 40px;
+}
+/*翻页*/
+#container .list_footer {
+	padding-top: 0px;
+	padding-bottom: 40px;
+}

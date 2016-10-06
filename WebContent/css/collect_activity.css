@@ -1,0 +1,369 @@
+@CHARSET "UTF-8";
+html,body {
+	height: 100%;
+}
+#container {
+	width: 1200px;
+	margin: 0 auto;
+	height: auto;
+}
+#container .left_menu {
+	width: 330px;
+	margin-top: 80px;
+	margin-right: 50px;
+	overflow: hidden;
+	display: inline-block;
+	float: left;
+}
+#container .left_menu .menu_ul li {
+	list-style: none;
+	width: 330px;
+	padding: 0 10px;
+	text-align: left;
+	border-bottom: 1px solid #b2b2b2;
+}
+#container .left_menu .menu_ul li:hover {
+	border-bottom: 1px solid #e84c3d;
+}
+#container .left_menu .menu_ul .menu_active {
+	border-bottom: 1px solid #e84c3d;
+}
+#container .left_menu .menu_ul li a {
+	display: block;
+	width: 330px;
+	padding: 31px 25px 5px 0;
+	margin: 0 auto;
+	font-size: 14px;
+}
+#container .left_menu .menu_ul li a img {
+	height: 19px;
+}
+/*mainbody*/
+#container .article_con {
+	display: inline-block;
+	width: 800px;
+	margin-top: 30px;
+	margin-right: 0;
+	float: left;
+	margin-bottom: 40px;
+}
+#container .article_con .title {
+	width: 100%;
+	height: 24px;
+	margin-top: 20px;
+	padding: 0 10px 10px;
+	border-bottom: 1px solid #d2d2d2;
+}
+#container .article_con .title .left {
+	height: 24px;
+	float: left;
+}
+/*list*/
+#container .article_list {
+	width: 750px;
+	margin: 30px auto 0px;
+}
+#container .article_list table {
+	width: 750px;
+}
+#container .article_list table tr td:nth-child(1) {
+	width: 300px;
+	padding: 8px 100px 8px 0px;
+	max-width: 300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#container .article_list table tr td:nth-child(2) {
+	width: 150px;
+	padding: 8px 0px 8px 0px;
+}
+#container .article_list table tr td:nth-child(3) {
+	width: 150px;
+	padding: 8px 0px 8px 0px;
+}
+#container .article_list table tr td .article_title {
+	font-size: 14px;
+	color: #b2b2b2;
+}
+#container .article_list table tr td .article_date {
+	font-size: 12px;
+	line-height: 14px;
+	color: #b2b2b2;
+}
+#container .article_list table tr .activity_title {
+	width: 450px;
+	padding-right: 50px !important;
+}
+#container .article_list table tr .activity_type {
+	width: 120px;
+	padding-right: 50px;
+}
+#container .article_list table tr .activity_date {
+	width: 120px;
+	padding-right: 50px;
+}
+#container .article_list table tr .activity_btn {
+	width: 200px;
+}
+#container .article_list table tr:hover .article_title {
+	color: #000000;
+}
+#container .article_list table tr:hover .article_date {
+	color: #000000;
+}
+#container .article_list table tr td .modify, .delete {
+	font-size: 12px;
+	line-height: 14px;
+	color: #b2b2b2;
+	padding-left: 20px;
+}
+#container .article_list table tr td .modify:hover, .delete:hover {
+	color: #e84c3d;
+}
+/*鑺辩矇淇变箰閮ㄦ垚鍛�*/
+.fans_list {
+	width: 100%;
+	margin: 30px auto 20px;
+}
+.fans_list #fans_table {
+	width: 550px;
+	margin: 0 auto;
+}
+#fans_table tr td:nth-child(1) {
+	width: 50px;
+	vertical-align: top;
+	font-size: 14px;
+	font-weight: bold;
+	height: 40px;
+	line-height: 24px;
+}
+#fans_table tr td:nth-child(2) {
+	width: 450px;
+	vertical-align: top;
+	font-size: 13px;
+	line-height: 24px;
+}
+#fans_table tr:nth-child(1) td {
+	text-align: center;
+	font-size: 16px;
+	height: 40px;
+}
+/*article鈥擾footer*/
+#container .article_con .article_footer{
+	width: auto;
+	height: 70px;
+	padding-top: 20px;
+	text-align: right;
+	margin-bottom: 50px;
+	padding-right: 100px;
+}
+#container .article_con .article_footer #modify, #delete {
+	width: 80px;
+	height: 30px;
+	line-height: 33px;
+	color: #ffffff;
+	border-top-left-radius: 4px 2px;
+	border-top-right-radius: 2px 4px;
+	border-bottom-right-radius: 4px 2px;
+	border-bottom-left-radius: 2px 4px;
+	margin-top: 10px;
+	margin-right: 20px;
+	padding: 7px 15px;
+}
+#container .article_con .article_footer #modify {
+	background: #e84c3d;
+	border: #e84c3d;
+}
+#container .article_con .article_footer #modify:hover {
+	background: #F6867B;
+	border: #F6867B;
+}
+#container .article_con .article_footer #modify:focus {
+	background: #C52718;
+	border: #C52718;
+	outline: none;
+}
+/*鑺辩矇淇变箰閮ㄧ紪杈�*/
+.article_con #fans_table input, select, textarea {
+	border: 1px solid #b2b2b2;
+	padding: 5px;
+	margin: -5px 0 18px 0;
+	font-family: 'Microsoft Yahei','寰蒋闆呴粦';
+	font-size: 12px;
+}
+.article_con #fans_table input:hover, select:hover, textarea:hover {
+	border: 1px solid #828282;
+}
+.article_con #fans_table input:focus, select:focus, textarea:focus {
+	border: 1px solid #000000;
+	outline: none;
+}
+.article_con #fans_table #minister,#officer {
+	width: 450px;
+}
+.article_con #fans_table #member {
+	width: 450px;
+	max-width: 450px;
+	height: 150px;
+	max-height: 150px;
+}
+.article_con #fans_table tr td .btn_con {
+	width: auto;
+	float: right;
+	margin-right: 28px;
+}
+.article_con #fans_table tr td #submit, #cancel {
+	width: 80px;
+	height: 30px;
+	line-height: 33px;
+	color: #ffffff;
+	border-top-left-radius: 4px 2px;
+	border-top-right-radius: 2px 4px;
+	border-bottom-right-radius: 4px 2px;
+	border-bottom-left-radius: 2px 4px;
+	margin-top: 10px !important;
+	margin-left: 30px !important;
+	padding: 0px !important;
+}
+.article_con #fans_table tr td #submit {
+	background: #e84c3d;
+	border: #e84c3d;
+}
+.article_con #fans_table tr td #submit:hover {
+	background: #F6867B;
+	border: #F6867B;
+}
+.article_con #fans_table tr td #submit:focus {
+	background: #C52718;
+	border: #C52718;
+	outline: none;
+}
+.article_con #fans_table tr td #cancel {
+	background: #A8A7A7;
+	border: #A8A7A7;
+}
+.article_con #fans_table tr td #cancel:hover {
+	background: #C5C4C4;
+	border: #C5C4C4;
+}
+.article_con #fans_table tr td #cancel:focus {
+	background: #7E7B7B;
+	border: #7E7B7B;
+	outline: none;
+}
+/*table*/
+.article_con .article_detailes {
+	width: 800px;
+	margin: 40px auto;
+}
+.article_con .article_detailes tr td:nth-child(1) {
+	width: 100px;
+	vertical-align: top;
+}
+.article_con .article_detailes tr td:nth-child(2) {
+	width: 700px;
+	vertical-align: top;
+	padding-left: 20px;
+}
+.article_con .article_detailes tr td:nth-child(1) span {
+	font-size: 14px;
+	float: right;
+	white-space: pre;
+}
+.article_con input, select, textarea {
+	border: 1px solid #b2b2b2;
+	padding: 5px;
+	margin: -5px 0 18px 0;
+	font-family: 'Microsoft Yahei','寰蒋闆呴粦';
+	font-size: 12px;
+}
+.article_con input:hover, select:hover, textarea:hover {
+	border: 1px solid #828282;
+}
+.article_con input:focus, select:focus, textarea:focus {
+	border: 1px solid #000000;
+	outline: none;
+}
+.article_con .article_detailes tr td:nth-child(2) #title {
+	width: 550px;
+	height: 16px;
+	line-height: 18px;
+	font-size: 12px;
+}
+.article_con .article_detailes tr td:nth-child(2) #pic_text {
+	width: 200px;
+	height: 19px;
+	line-height: 18px;
+	font-size: 12px;
+	background-color: #ffffff;
+}
+.article_con .article_detailes tr td:nth-child(2) #pic_instead {
+	width: 61px;
+	height: 31px;
+	line-height: 18px;
+	font-size: 12px;
+	background-color: #ffffff;
+}
+.article_con .article_detailes tr td:nth-child(2) #content {
+	width: 550px;
+	max-width: 550px;
+	height: 300px;
+	max-height: 300px;
+	font-size: 14px;
+	line-height: 22px;
+	font-size: 12px;
+}
+.article_con .article_detailes tr td:nth-child(2) #duty,#require {
+	width: 550px;
+	max-width: 550px;
+	height: 300px;
+	max-height: 300px;
+	font-size: 14px;
+	line-height: 22px;
+	font-size: 12px;
+}
+.article_con .article_detailes tr td .btn_con {
+	width: auto;
+	float: right;
+	margin-right: 100px;
+}
+.article_con .article_detailes tr td #submit, #cancel {
+	width: 80px;
+	height: 30px;
+	line-height: 33px;
+	color: #ffffff;
+	border-top-left-radius: 4px 2px;
+	border-top-right-radius: 2px 4px;
+	border-bottom-right-radius: 4px 2px;
+	border-bottom-left-radius: 2px 4px;
+	margin-top: 10px;
+	margin-right: 30px;
+	padding: 0;
+}
+.article_con .article_detailes tr td #submit {
+	background: #e84c3d;
+	border: #e84c3d;
+}
+.article_con .article_detailes tr td #submit:hover {
+	background: #F6867B;
+	border: #F6867B;
+}
+.article_con .article_detailes tr td #submit:focus {
+	background: #C52718;
+	border: #C52718;
+	outline: none;
+}
+.article_con .article_detailes tr td #cancel {
+	background: #A8A7A7;
+	border: #A8A7A7;
+}
+.article_con .article_detailes tr td #cancel:hover {
+	background: #C5C4C4;
+	border: #C5C4C4;
+}
+.article_con .article_detailes tr td #cancel:focus {
+	background: #7E7B7B;
+	border: #7E7B7B;
+	outline: none;
+}

@@ -1,0 +1,158 @@
+html,body {
+	min-height: 100%;
+}
+#survey {
+	width: 600px;
+	min-height: 100%;
+	margin: 80px auto 20px;
+	padding: 0 10px 10px;
+}
+#survey.content {
+	width: 100%;
+	margin: 0 auto;
+}
+#survey .content .title {
+	height: 24px;
+	padding: 0 10px 10px;
+	border-bottom: 1px solid #d2d2d2;
+}
+#survey .content .title .left {
+	height: 24px;
+	float: left;
+}
+#survey .content .list {
+	width: 100%;
+	height: auto;
+}
+
+/*table base*/
+#survey_base {
+	width: 600px;
+	margin: 20px auto;
+}
+#survey_base tr td {
+	padding: 5px;
+}
+#survey_base tr td:nth-child(1) {
+	width: 72px;
+}
+
+#survey_base  p:nth-child(1) {
+	color: #979797;
+	font-size: 28px;
+}
+#survey_base span:nth-child(1) {
+	color: #979797;
+	font-size: 20px;
+	
+}
+#survey_base tr:nth-child(1) td {
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+#survey_base tr:nth-child(1) td a:nth-child(1):hover {
+	color: #000000;
+}
+
+#survey_base tr td:nth-child(2) input {
+	width: 250px;
+	font-size: 14px;
+	padding:5px;
+	border: 1px solid #b2b2b2;
+}
+#survey_base tr td:nth-child(2) input:hover {
+	border: 1px solid #828282;
+}
+#survey_base tr td:nth-child(2) input:focus {
+	border: 1px solid #000000;
+	outline: none;
+}
+
+/*table details*/
+#survey_details {
+	width: 750px;
+
+}
+#survey_details tr td {
+	padding: 0px;
+}
+
+#survey_details tr td:nth-child(1) {
+	font-size:25px;
+	width:60px;
+	height:40px;
+}
+
+#survey_details tr td:nth-child(1) input:nth-child(1) {
+	font-size:25px;
+	width:90%;
+	height:90%;
+	text-align:center;
+}
+#survey_details tr td:nth-child(2) {
+	font-size:25px;
+	width:200px;
+	height:40px;
+}
+#survey_details tr td:nth-child(2) input:nth-child(1) {
+	font-size:25px;
+	width:98%;
+	height:100%;
+}
+#survey_details tr td:nth-child(3) {
+	font-size:25px;
+	width:160px;
+	height:40px;
+}
+#survey_details tr td:nth-child(3) input:nth-child(1) {
+	font-size:25px;
+	width:98%;
+	height:100%;
+}
+
+#survey_details tr td:nth-child(2) input:hover {
+	border: 1px solid #828282;
+}
+#survey_details tr td:nth-child(2) input:focus {
+	border: 1px solid #000000;
+	outline: none;
+}
+#survey_details tr td:nth-child(2) input:hover {
+	border: 1px solid #828282;
+}
+#survey_details tr td:nth-child(2) input:focus {
+	border: 1px solid #000000;
+	outline: none;
+}
+#survey_details tr td:nth-child(3) input:hover {
+	border: 1px solid #828282;
+}
+#survey_details tr td:nth-child(3) input:focus {
+	border: 1px solid #000000;
+	outline: none;
+}
+
+#survey_btn {
+	width: 80px;
+	height: 30px;
+	line-height: 33px;
+	color: #ffffff;
+	font-family: 'Microsoft Yahei','微软雅黑';
+	border-top-left-radius: 8px 2px;
+	border-top-right-radius: 2px 2px;
+	border-bottom-right-radius: 4px 2px;
+	border-bottom-left-radius: 2px 4px;
+	margin: 20px 0 10px 100px;
+	padding: 0;
+	background: #e84c3d;
+	border: #e84c3d;
+}
+#survey_btn:hover {
+	background: #F6867B;
+	border: #F6867B;
+}
+#survey_btn:focus {
+	background: #C52718;
+	border: #C52718;
+	outline: none;
+}

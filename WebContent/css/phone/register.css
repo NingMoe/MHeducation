@@ -1,0 +1,117 @@
+html,body {
+	min-height: 100%;
+}
+#register {
+	width: 90%;
+	min-height: 100%;
+	margin: 7em auto 20px;
+	padding: 0 10px 10px;
+}
+#register.content {
+	width: 100%;
+	margin: 0 auto;
+}
+#register .content .title {
+	height: 3em;
+	padding: 0 10px 10px;
+	border-bottom: 1px solid #d2d2d2;
+}
+#register .content .title .left {
+	height: 3em;
+	float: left;
+}#register .content .title .left img {
+	height: 3em;
+	float: left;
+}
+#register .content .list {
+	width: 100%;
+	height: auto;
+}
+
+/*table*/
+#register_details {
+	width: 90%;
+	margin: 20px auto 50px;
+}
+#register_details tr td {
+	padding: 10px;
+}
+#register_details tr:nth-child(1) a:nth-child(1) {
+	color: #979797;
+	font-size: 2.4em;
+}
+#register_details tr td:nth-child(1) span {
+	color: #979797;
+	font-size: 2.4em;
+	white-space: pre; 
+}
+#register_details tr:nth-child(1) a:nth-child(2) {
+	color: #000000;
+	font-size: 2.4em;
+}
+#register_details tr:nth-child(1) td {
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+#register_details tr:nth-child(1) td a:nth-child(1):hover {
+	color: #000000;
+}
+#register_details tr:nth-child(6) td {
+	border-bottom: 1px dashed #b2b2b2;
+	height: 10px;
+}
+#register_details tr:nth-child(7) td {
+	height: 10px;
+}
+#register_details tr td:nth-child(2) input {
+	width: 17em;
+	font-size: 2.4em;
+	padding:5px;
+	border: 1px solid #b2b2b2;
+}
+#register_details tr td:nth-child(2) input:hover {
+	border: 1px solid #828282;
+}
+#register_details tr td:nth-child(2) input:focus {
+	border: 1px solid #000000;
+	outline: none;
+}
+#register_details tr td:nth-child(2) select {
+	padding: 3px 5px;
+	font-family: 'Microsoft Yahei','微软雅黑';
+	font-size: 2.4em;
+}
+#register_details tr td:nth-child(2) select:hover {
+	border: 1px solid #828282;
+}
+#register_details tr td:nth-child(2) select:focus {
+	border: 1px solid #000000;
+	outline: none;
+}
+#register_details tr td #register_btn {
+	width: 3.5em;
+	height: 1.5em;
+	line-height: 1.5em;
+	font-size: 2em;
+	color: #ffffff;
+	font-family: 'Microsoft Yahei','微软雅黑';
+	border-top-left-radius: 4px 2px;
+	border-top-right-radius: 2px 4px;
+	border-bottom-right-radius: 4px 2px;
+	border-bottom-left-radius: 2px 4px;
+	margin: 10px 0 10px 130px;
+	padding: 0;
+	background: #e84c3d;
+	border: #e84c3d;
+	position: relative;
+	left: 30%;
+}
+#register_details tr td #register_btn:hover {
+	background: #F6867B;
+	border: #F6867B;
+}
+#register_details tr td #register_btn:focus {
+	background: #C52718;
+	border: #C52718;
+	outline: none;
+}

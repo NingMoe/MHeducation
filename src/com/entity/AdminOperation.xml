@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AdminOperation">
+
+	<select id="getOperationList" parameterType="string" resultType="com.entity.AdminOperation">
+		select * from admin_operation 
+		where belongs= #{belongs}
+	</select>
+
+	<insert id="addAdminIntentquestion" parameterType="string">
+		insert into admin_intentquestion_module (level) values(#{level})
+	</insert>
+	
+	<insert id="setActivity" parameterType="string">
+		insert into admin_activity 
+		( theme,is_display,location,type,roll,objects,begin_time,
+		end_time,poster,summary,state,read_amount,publish_time
+		)
+		values
+		(#{theme},#{is_display},#{location},#{type},#{roll},#{objects},#{begin_time},
+		#{end_time},#{poster},#{summary},"1","0",#{publish_time}
+		)
+	</insert>
+	
+	<delete id="delActivity">
+	delete from admin_activity where id = #{id}
+	</delete>
+	
+	<update id="modifyActivity">
+	update admin_activity set
+	theme=#{theme},is_display=#{is_display},location=#{location},type=#{type},roll=#{roll},objects=#{objects},begin_time=#{begin_time},end_time=#{end_time},poster=#{poster},summary=#{summary},state="1",read_amount="0",publish_time=#{publish_time}
+	where id = #{id}
+	</update>
+	
+	<update id="finishActivity">
+	update admin_activity set
+	state="0"
+	where id = #{id}
+	</update>
+	
+	<insert id="createPosition" parameterType="string">
+	insert into admin_position 
+	(title,link,place,type,number,duty,requires,publish_time)
+	values
+	(#{title},#{link},#{place},#{type},#{number},#{duty},#{requires},#{publish_time})
+	</insert>
+	
+	<delete id="delPosition">
+	delete from admin_position where id = #{id}
+	</delete>
+	
+	<update id="modifyPosition">
+	update admin_position set
+	title=#{title},link=#{link},place=#{place},type=#{type},number=#{number},duty=#{duty},requires=#{requires},publish_time=#{publish_time}
+	where id = #{id}
+	</update>
+	
+	<insert id="createArticle" parameterType="string">
+	insert into admin_article 
+	(title,type,pic_text,content,publish_time,read_amount)
+	values
+	(#{title},#{type},#{pic_text},#{content},#{publish_time},"0")
+	</insert>
+	
+	<delete id="deleteArticle">
+	delete from admin_article where id = #{id}
+	</delete>
+	
+	<update id="modifyArticle">
+	update admin_article set
+	title=#{title},type=#{type},pic_text=#{pic_text},content=#{content},publish_time=#{publish_time},read_amount="0"
+	where id = #{id}
+	</update>
+	
+	<delete id="deleteHuaFansNews">
+	delete from admin_huafansnews where id = #{id}
+	</delete>
+	
+	<update id="modifyFansNews">
+	update admin_huafansnews set
+	title=#{title},place=#{place},type=#{type},pic_text=#{pic_text},content=#{content},publish_time=#{publish_time},read_amount=#{read_amount}
+	where id = #{id}
+	</update>
+	
+	<update id="modifyHuafans">
+	update admin_huafans set
+	minister=#{minister},officer=#{officer},member=#{member}
+	where id = #{id}
+	</update>
+	
+	<select id="getUsers" parameterType="string" resultType="com.entity.User">
+	select * from user
+	</select>
+	
+	<update id="downToCom">
+	update user set
+	manager='0'
+	where UserId = #{UserID}
+	</update>
+	
+	<update id="upToAdmin">
+	update user set
+	manager='1'
+	where UserId = #{UserID}
+	</update>
+</mapper>

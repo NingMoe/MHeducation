@@ -1,0 +1,135 @@
+#container {
+	width: 1200px;
+	margin: 0 auto;
+	height: auto;
+	padding-bottom: 80px;
+}
+#container .article_con {
+	width: 800px;
+	margin: 30px auto;
+}
+#container .article_con .title {
+	width: 100%;
+	height: 24px;
+	margin-top: 20px;
+	padding: 0 10px 10px;
+	border-bottom: 1px solid #d2d2d2;
+}
+#container .article_con .title .left {
+	height: 24px;
+	float: left;
+}
+/*活动详情*/
+#container .article_con .activity_details {
+	width: 750px;
+	margin: 20px auto;
+	padding: 0px;
+}
+.activity_details .activity_table {
+	width: 600px;
+	margin: 0px;
+}
+.activity_details .activity_table tr:nth-child(1) td:nth-child(1) {
+	width: 400px;
+}
+.activity_details .activity_table tr:nth-child(1) td:nth-child(2) {
+	width: 400px;
+}
+.activity_details .activity_table tr:nth-child(2) td:nth-child(1) {
+	width: 150px;
+}
+.activity_details .activity_table tr:nth-child(2) td:nth-child(2) {
+	width: 450px;
+}
+.activity_details .activity_table tr td:nth-child(1) span {
+	font-size: 13px;
+	color: #b2b2b2;
+}
+.activity_details .activity_table tr td:nth-child(2) span {
+	font-size: 13px;
+	color: #000000;
+}
+.activity_details .activity_table tr:nth-child(1) td:nth-child(1) img {
+	width: 270px;
+	height: 405px;
+	margin-top: 15px;
+}
+.activity_details .activity_table tr:nth-child(1) td:nth-child(1) .end {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+.activity_details .activity_table tr:nth-child(1) td:nth-child(2) .activity_title {
+	font-size: 18px;
+	color: #000000;
+}
+.activity_details .activity_table tr:nth-child(9) td {
+	vertical-align: bottom;
+}
+.activity_details .activity_table #join,#finish,#quit {
+	width: 80px;
+	height: 30px;
+	line-height: 33px;
+	color: #ffffff;
+	border-top-left-radius: 4px 2px;
+	border-top-right-radius: 2px 4px;
+	border-bottom-right-radius: 4px 2px;
+	border-bottom-left-radius: 2px 4px;
+	margin-top: 10px;
+	margin-right: 20px;
+	padding: 7px 15px;
+}
+.activity_details .activity_table #join {
+	background: #1bbc9d;
+	border: #1bbc9d;
+}
+.activity_details .activity_table #finish {
+	background: #b2b2b2;
+	border: #b2b2b2;
+}
+.activity_details .activity_table #join:hover {
+	background: #71DFCA;
+	border: #71DFCA;
+}
+.activity_details .activity_table #join:focus {
+	background: #11977D;
+	border: #11977D;
+	outline: none;
+}
+.activity_details .activity_table #quit {
+	background: #e84c3d;
+	border: #e84c3d;
+}
+.activity_details .activity_table #quit:hover {
+	background: #F6867B;
+	border: #F6867B;
+}
+.activity_details .activity_table #quit:focus {
+	background: #C52718;
+	border: #C52718;
+	outline: none;
+}
+#container .article_con .activity_details .activity_des {
+	width: 750px;
+	margin: 20px auto;
+}
+#container .article_con .activity_details .activity_des span:nth-child(1) {
+	font-size: 14px;
+	color: #b2b2b2;
+	line-height: 28px;
+}
+#container .article_con .activity_details .activity_des .activity_description {
+	width: 700px;
+}
+#container .article_con .activity_details .activity_des .activity_description p {
+	font-size: 14px;
+	color: #000000;
+	line-height: 28px;
+	white-space: pre-line;
+}
+/*article—_footer*/
+#container .article_con .article_footer{
+	width: 100%;
+	height: 100px;
+	border-top: 1px solid #b2b2b2;
+}

@@ -1,0 +1,192 @@
+html,body {
+	height: 100%;
+}
+#container {
+	width: 1200px;
+	margin: 0 auto;
+	height: 200px;
+}
+#container .left_menu {
+	width: 330px;
+	margin-top: 80px;
+	margin-right: 50px;
+	overflow: hidden;
+	display: inline-block;
+	float: left;
+}
+#container .left_menu .menu_ul li {
+	list-style: none;
+	width: 330px;
+	padding: 0 10px;
+	text-align: left;
+	border-bottom: 1px solid #b2b2b2;
+}
+#container .left_menu .menu_ul li:hover {
+	border-bottom: 1px solid #e84c3d;
+}
+#container .left_menu .menu_ul .menu_active {
+	border-bottom: 1px solid #e84c3d;
+}
+#container .left_menu .menu_ul li a {
+	display: block;
+	width: 330px;
+	padding: 31px 25px 5px 0;
+	margin: 0 auto;
+	font-size: 14px;
+}
+#container .left_menu .menu_ul li a img {
+	height: 19px;
+}
+#container .article_con {
+	display: inline-block;
+	width: 800px;
+	margin-top: 30px;
+	margin-right: 0;
+	float: left;
+}
+#container .article_con .title {
+	width: 100%;
+	height: 24px;
+	margin-top: 20px;
+	padding: 0 10px 10px;
+	border-bottom: 1px solid #d2d2d2;
+}
+#container .article_con .title .left {
+	height: 24px;
+	float: left;
+}
+/*list*/
+#container .article_list {
+	width: 750px;
+	margin: 30px auto 0px;
+}
+#container .article_list table {
+	width: 750px;
+}
+#container .article_list table tr {
+	height: 30px;
+}
+#container .article_list table tr td span {
+	color: #b2b2b2;
+}
+#container .article_list table tr:hover td span {
+	color: #000000;
+}
+#container .article_list table tr td a {
+	color: #b2b2b2;
+}
+#container .article_list table tr:hover td a {
+	color: #e84c3d;
+}
+#container .btn_con {
+	width: 250px;
+	float: right;
+	margin: 30px 0;
+}
+#container .btn_con #export, #return {
+	width: 80px;
+	height: 30px;
+	line-height: 33px;
+	color: #ffffff;
+	border-top-left-radius: 4px 2px;
+	border-top-right-radius: 2px 4px;
+	border-bottom-right-radius: 4px 2px;
+	border-bottom-left-radius: 2px 4px;
+	margin-top: 10px;
+	margin-right: 20px;
+	padding: 7px 15px;
+}
+#container .btn_con #export {
+	background: #e84c3d;
+	border: #e84c3d;
+}
+#container .btn_con #export:hover {
+	background: #F6867B;
+	border: #F6867B;
+}
+#container .btn_con #export:focus {
+	background: #C52718;
+	border: #C52718;
+	outline: none;
+}
+#container .btn_con #return {
+	background: #A8A7A7;
+	border: #A8A7A7;
+}
+#container .btn_con #return:hover {
+	background: #C5C4C4;
+	border: #C5C4C4;
+}
+#container .btn_con #return:focus {
+	background: #7E7B7B;
+	border: #7E7B7B;
+	outline: none;
+}
+
+/*管理员管理界面*/
+.admin_hide_show {
+	height: 34px;
+	width: 300px;
+}
+.admin_change {
+	cursor: pointer;
+}
+.admin_hide {
+	display: none;
+	width: 300px;
+	height: 34px;
+}
+.admin_hide .admin_type {
+	padding: 0px;
+	font-family: 'Microsoft Yahei','微软雅黑';
+	font-size: 12px;
+	color: #b2b2b2;
+	margin-right: 20px;
+}
+.admin_hide .admin_type:hover {
+	border: 1px solid #828282;
+	color: #000000;
+}
+.admin_hide .admin_type:focus {
+	border: 1px solid #000000;
+	outline: none;
+	color: #000000;
+}
+.admin_hide .admin_save, .admin_cancle {
+	width: 40px;
+	height: 20px;
+	color: #ffffff;
+	border-top-left-radius: 4px 2px;
+	border-top-right-radius: 2px 4px;
+	border-bottom-right-radius: 4px 2px;
+	border-bottom-left-radius: 2px 4px;
+	margin-right: 10px;
+	font-family: 'Microsoft Yahei','微软雅黑';
+	font-size: 12px;
+}
+.admin_hide .admin_save {
+	background: #e84c3d;
+	border: #e84c3d;
+}
+.admin_hide .admin_save:hover {
+	background: #F6867B;
+	border: #F6867B;
+}
+.admin_hide .admin_save:focus {
+	background: #C52718;
+	border: #C52718;
+	outline: none;
+}
+.admin_hide .admin_cancle {
+	background: #A8A7A7;
+	border: #A8A7A7;
+}
+.admin_hide .admin_cancle:hover {
+	background: #C5C4C4;
+	border: #C5C4C4;
+}
+.admin_hide .admin_cancle:focus {
+	background: #7E7B7B;
+	border: #7E7B7B;
+	outline: none;
+}

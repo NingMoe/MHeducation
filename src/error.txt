@@ -1,0 +1,14 @@
+101 注册错误
+102 无用户
+103 密码不匹配
+104 抛出异常    generateJsonObject(json,"104","exception");
+105 保存失败
+106 用户已经存在
+107 用户不存在
+108 文件类型不匹配 
+109 验证码保存失败
+110 验证码超时
+111 删除用户失败
+112 文件头不匹配
+113 未登录      return generateJsonObject(json, "113", "noLogin");
+114 无信息      return generateJsonObject(json, "114", "noInfor");
