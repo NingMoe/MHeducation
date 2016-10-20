@@ -1,6 +1,6 @@
 package com.user.controller;
 
-import java.io.IOException;
+import java.io.File;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,8 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.Form.SecurityCodeForm;
+import com.Form.UserEssentialForm;
 import com.Form.UserForm;
 import com.Form.UserJobConfimForm;
 import com.Form.UserLoginForm;
@@ -155,7 +157,38 @@ public class UserController {
 	@ResponseBody
 	@RequestMapping("/login.do")
 	public String login(HttpServletRequest req, HttpServletResponse response,User user,HttpSession httpSession){
-		System.out.println(userservice.login(user,httpSession));
 		return userservice.login(user,httpSession);
+	}
+	/**
+	 * 用户个人信息
+	 * MHeducation
+	 * @param req
+	 * @param User
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("/getUserInfo.do")
+	public String getUserInfo(HttpServletRequest req, HttpServletResponse response,HttpSession httpSession){
+		return userservice.getUserInfo(httpSession);
+	}
+	/**
+	 * 用户进行登录
+	 * MHeducation
+	 * @param req
+	 * @param UserEssentialForm
+	 * @return
+	 */
+	@RequestMapping("/perfectInformation.do")
+	public String perfectInformation(HttpServletRequest req, HttpServletResponse response,UserEssentialForm userEssentialForm,HttpSession httpSession){
+		logger.info("exe perfectInformation.do");
+		String result = userservice.perfectInformation(userEssentialForm,httpSession,req);
+		if(result.equals("success"))
+	    {
+	    	 return "/MHeducation/MPersonal/home.html";
+	    }
+	    else
+	    {
+	    	return "admin/create_activity";
+	    }
 	}
 }

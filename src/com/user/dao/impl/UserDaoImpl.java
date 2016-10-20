@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.Form.SecurityCodeForm;
+import com.Form.UserEssentialForm;
 import com.Form.UserForm;
 import com.Form.UserJobConfimForm;
 import com.Form.UserLoginForm;
@@ -50,7 +51,6 @@ public class UserDaoImpl  extends SqlSessionDaoSupport implements UserDaoInterfa
 
 
 	public String RegisterByAjax(UserForm userForm) {
-	
 		List<User> user=this.getSqlSession().selectList("User.RegisterByAjax",userForm);
 		if(user.size()!=0){
 			return "exit";
@@ -93,6 +93,29 @@ public class UserDaoImpl  extends SqlSessionDaoSupport implements UserDaoInterfa
 			return "success";
 		}else{
 			return "error";
+		}
+	}
+
+
+	/**
+	 * 先检查是否有相同的email数据。如果有则更新，没有就插入
+	 * 
+	 * */
+	public boolean perfectInformation(UserEssentialForm userEssentialForm) {
+		int result = -1;
+		List<UserEssentialForm> resultList=this.getSqlSession().selectList("User.isExitPerfectInformation",userEssentialForm);
+		if(resultList.size() != 0)
+		{
+			result = this.getSqlSession().update("User.UpdataPerfectInformation",userEssentialForm);
+			result *= this.getSqlSession().update("User.UpdateUser",userEssentialForm);
+		}else{
+			result *= this.getSqlSession().update("User.UpdateUser",userEssentialForm);
+			result = this.getSqlSession().insert("User.InsertPerfectInformation",userEssentialForm);
+		}
+		if(result==1){
+			return true;
+		}else{
+			return false;
 		}
 	}
 

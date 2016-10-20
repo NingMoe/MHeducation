@@ -1,7 +1,6 @@
 package com.user.dao;
 
-import com.Form.UserForm;
-import com.Form.UserLoginForm;
+import com.Form.*;
 import com.entity.User;
 
 public interface UserDaoInterface {
@@ -19,4 +18,6 @@ public interface UserDaoInterface {
 	public String register(User user);
 	
 	public User login(User user);
+	
+	public boolean perfectInformation(UserEssentialForm userEssentialForm);
 }

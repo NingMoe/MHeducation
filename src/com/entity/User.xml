@@ -68,8 +68,8 @@
 			UserID=#{item}
 		</foreach>
 	</delete>
-<!-- MHeducation -->
-		<insert id="userRegister" parameterType="com.entity.User" >
+								<!-- MHeducation -->
+	<insert id="userRegister" parameterType="com.entity.User" >
 		insert into user
 		( user_id,nickname,role,email,password,phone,occupation,
 		registration_time,head_portrait,sex
@@ -79,4 +79,40 @@
 		#{registration_time},#{head_portrait},#{sex}
 		)
 	</insert>
+	
+	<select id="isExitPerfectInformation" parameterType="int"  resultType="com.Form.UserEssentialForm">
+		select * from perfectInformation where email=#{email}
+	</select>
+	
+	<insert id="InsertPerfectInformation" parameterType="com.Form.UserEssentialForm" >
+		insert into perfectInformation
+		( email,occupation,nickname,phone,readingSchool,placeOfOrigin,collegeEntranceExaminationScores,
+		resumeFileName,audioFrequencyFileName,uploadTime
+		)
+		values
+		(#{email},#{occupation},#{nickname},#{phone},#{readingSchool},#{placeOfOrigin},#{collegeEntranceExaminationScores},
+		#{resumeFileName},#{audioFrequencyFileName},#{uploadTime}
+		)
+	</insert>
+	
+	<update id="UpdataPerfectInformation" parameterType="com.Form.UserEssentialForm" >
+		update  perfectInformation SET 
+		occupation = #{occupation},  
+		nickname = #{nickname}, 
+		occupation = #{occupation}, 
+		phone = #{phone}, 
+		readingSchool = #{readingSchool}, 
+		placeOfOrigin = #{placeOfOrigin}, 
+		collegeEntranceExaminationScores = #{collegeEntranceExaminationScores}, 
+		resumeFileName = #{resumeFileName}, 
+		audioFrequencyFileName = #{audioFrequencyFileName}, 
+		uploadTime = #{uploadTime}
+		where email=#{email};
+	</update>
+	<update id="UpdateUser" parameterType="com.Form.UserEssentialForm" >
+		update user SET 
+		nickname = #{nickname},
+		head_portrait = #{headPortraitFileName}
+		where email=#{email};
+	</update>
 </mapper>

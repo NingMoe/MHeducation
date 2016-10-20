@@ -1,5 +1,6 @@
 package com.user.service.impl;
 
+import java.io.File;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -10,6 +11,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import net.sf.json.JSONObject;
@@ -19,10 +21,12 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import sun.misc.BASE64Encoder;
 
 import com.Form.SecurityCodeForm;
+import com.Form.UserEssentialForm;
 import com.Form.UserForm;
 import com.Form.UserJobConfimForm;
 import com.Form.UserLoginForm;
@@ -257,6 +261,100 @@ public class UserServiceImpl extends BasService implements UserServiceInterface 
 			return generateJsonObject(json, "104", "exception");
 		}
 
+	}
+
+	/**
+	 * 获得用户信息
+	 * MHeducation
+	 * @throws Exception
+	 */
+	public String getUserInfo(HttpSession httpSession) {
+		User userResult = (User) httpSession.getAttribute("user");
+		JSONObject json = new JSONObject();
+		if(null == userResult)
+		{
+			return generateJsonObject(json, "102", "noUser");
+		}
+		return generateJsonObject(json, "200", "success",userResult);
+	}
+
+
+
+	@Override
+	public String perfectInformation(UserEssentialForm userEssentialForm,
+			HttpSession httpSession,HttpServletRequest req) {
+	    //上传文件
+		User user = (User) httpSession.getAttribute("user");
+		if( null == user)
+		{
+			return "false";
+		}
+		String ctxPath = req.getSession().getServletContext().getRealPath("")+ File.separator + "upload"+File.separator;
+		try {
+			MultipartFile uploadResume = userEssentialForm.getResume();
+			MultipartFile uploadAudioFrequency = userEssentialForm.getAudioFrequency();
+			MultipartFile uploadHeadPortrait = userEssentialForm.getHeadPortrait();
+			String resumeFilename = uploadResume.getOriginalFilename();
+			String audioFrequencyFilename = uploadAudioFrequency.getOriginalFilename();
+			String headPortraitFilename = uploadHeadPortrait.getOriginalFilename();
+			//如果服务器已存和上传文件同名的文件，则输出提示信息
+			File resumeTemFile = new File(uploadResume +resumeFilename );
+			File audioFrequencyTemFile = new File(uploadAudioFrequency +audioFrequencyFilename );
+			File headPortraitTemFile = new File(uploadHeadPortrait +headPortraitFilename );
+			if(resumeTemFile.exists())
+			{
+				boolean delResult = resumeTemFile.delete();
+				System.out.println("删除已存在的文件 : " + resumeTemFile.getName());
+			}
+			if(audioFrequencyTemFile.exists())
+			{
+				boolean delResult = audioFrequencyTemFile.delete();
+				System.out.println("删除已存在的文件 : " + audioFrequencyTemFile.getName());
+			}
+			if(headPortraitTemFile.exists())
+			{
+				boolean delResult = headPortraitTemFile.delete();
+				System.out.println("删除已存在的文件 : " + headPortraitTemFile.getName());
+			}
+			//开始保存文件到服务器
+			if(!resumeFilename.equals(""))
+			{
+				File fileResume = new File(ctxPath+ File.separator +resumeFilename);
+				uploadResume.transferTo(fileResume);
+				logger.info("success save fileResume:"+ ctxPath+ File.separator +resumeFilename);
+				userEssentialForm.setResumeFileName(resumeFilename);
+			}
+			if(!audioFrequencyFilename.equals(""))
+			{
+				File fileAudioFrequency = new File(ctxPath+ File.separator +audioFrequencyFilename);
+				uploadAudioFrequency.transferTo(fileAudioFrequency);
+				logger.info("success save fileAudioFrequency:"+ ctxPath+ File.separator +audioFrequencyFilename);
+				userEssentialForm.setAudioFrequencyFileName(audioFrequencyFilename);
+			}
+			if(!headPortraitFilename.equals(""))
+			{
+				File fileHeadPortrait = new File(ctxPath+ File.separator +headPortraitFilename);
+				uploadHeadPortrait.transferTo(fileHeadPortrait);
+				logger.info("success save headPortrait:"+ ctxPath+ File.separator +headPortraitFilename);
+				userEssentialForm.setHeadPortraitFileName(headPortraitFilename);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//存储数据库
+		SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		userEssentialForm.setUploadTime(df.format(new Date()));
+		userEssentialForm.setEmail(user.getEmail());
+		userEssentialForm.setOccupation(user.getOccupation());
+		boolean result = userdao.perfectInformation(userEssentialForm);
+		if(!result)
+		{
+			logger.info("fail to save perfectInformation");
+			return "false";
+		}
+		logger.info("success to save perfectInformation");
+		return "success";
 	}
 
 }

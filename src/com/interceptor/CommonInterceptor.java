@@ -18,7 +18,6 @@ public class CommonInterceptor extends HandlerInterceptorAdapter {
 
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
-		logger.info("CommonInterceptor  preHandle");
 		String url=request.getRequestURL().toString();
 		boolean judge=url.contains("findPassword")||url.contains("userRegister")||url.contains("RegisterByAjax")
 				||url.contains("logout")||url.contains("login")||url.contains("judgeCode")||url.contains("updatePassword");
@@ -27,11 +26,11 @@ public class CommonInterceptor extends HandlerInterceptorAdapter {
 		}  
 		User user =  (User)request.getSession().getAttribute("user"); 
         if(user == null){
-        	logger.info("Interceptor：跳转到login页面！");
+        	//logger.info("Interceptor:User is null,跳转到login页面!");
         	//request.getRequestDispatcher("/MHeducation/MPersonal/pages/core/login.html").forward(request, response);
-        	response.sendRedirect("/MHeducation/MPersonal/pages/core/login.html");
-        	return false;
-        	//return true;
+        	//response.sendRedirect("/MHeducation/MPersonal/pages/core/login.html");
+        	//return false;
+        	return true;
         }
         return true;
             

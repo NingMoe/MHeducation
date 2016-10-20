@@ -1,12 +1,14 @@
 package com.user.service;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import com.Form.SecurityCodeForm;
 import com.Form.UserForm;
 import com.Form.UserJobConfimForm;
 import com.Form.UserLoginForm;
-import com.entity.User;
+import com.entity.*;
+import com.Form.*;
 
 public interface UserServiceInterface {
 
@@ -52,13 +54,12 @@ public interface UserServiceInterface {
 	String getRanchQesInfor(User user);
 	String getIntentionSurvey(User user);
 /////////////////////////////MHeducation//////////////////////////////////////////////////////////	
-	/**
-	 * 新用户注册
-	 * @param userJobConfimForm 
-	 * @param httpSession
-	 * @return
-	 */
+
 	String register(User user,HttpSession httpSession);
 	
 	String login(User userloginForm, HttpSession httpSession) ;
+	
+	String getUserInfo( HttpSession httpSession);
+	
+	String perfectInformation(UserEssentialForm userEssentialForm,HttpSession httpSession,HttpServletRequest req);
 }
